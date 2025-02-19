@@ -78,7 +78,7 @@
     }
 
     section h2 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       margin-bottom: 20px;
       text-align: center;
       color: #000000;
@@ -156,7 +156,7 @@
     }
 
     .price-tier h3 {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       color: #000000;
     }
 
@@ -197,7 +197,12 @@
       background: white;
       padding: 60px 20px;
     }
-
+    strong{
+      color: #4CAF50;
+    }
+    .contact-info p{
+      color: rgb(20, 20, 20);
+    }
     form {
       max-width: 600px;
       margin: 0 auto;
@@ -275,6 +280,15 @@
         flex: 1 1 100%;
         max-width: 100%;
       }
+      section, footer {
+      margin: 10px;
+      padding: 15px;
+      }
+
+      .social-media {
+        display: flex;
+        justify-content: center;
+        }
     }
   </style>
 </head>
@@ -361,7 +375,7 @@
       </div>
     </div>
   </section>
-  <section id="contact">
+  <!-- <section id="contact">
     <h2>Contactez-nous</h2>
     <form>
       <input type="text" placeholder="Votre nom" required>
@@ -372,6 +386,30 @@
   </section>
   <footer>
     <p>&copy; 2025 MindfulTech Pro. Tous droits réservés.</p>
+  </footer> -->
+  <section id="contact">
+    <h2>Contactez-nous</h2>
+    <div class="contact-info">
+      <p><strong>Localisation :</strong> Abidjan, Côte d'Ivoire</p>
+      <p><strong>Téléphone :</strong> +225 05 12 86 21 20</p>
+      <p><strong>Email :</strong> mindfulTech0@gmail.com</p>
+    </div>
+    <br>
+    <form>
+      <input type="text" placeholder="Votre nom" required>
+      <input type="email" placeholder="Votre email" required>
+      <textarea placeholder="Votre message" rows="5" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+  
+  <footer>
+    <p>&copy; 2025 MindfulTech Pro. Tous droits réservés.</p>
+    <div class="social-media">
+      <a href="https://www.facebook.com/share/1BUUUcSL8j/?mibextid=wwXIfr" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="30">
+      </a>
+    </div>
   </footer>
 </body>
 </html>
