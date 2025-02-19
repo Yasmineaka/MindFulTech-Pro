@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindfulTech Pro - Bien-être Mental pour les Professionnels</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <style>
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+      background: #f9fafb;
+    }
+
+    h1, h2, h3 {
+      color: #000000;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .logo{
+      width: 300px;
+      height: 250px;
+    }
+    /* En-tête */
+    header {
+      background: linear-gradient(135deg, #4CAF50, #45a049);
+      color: white;
+      /* padding: 1px 0; */
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin: 10px 0 0;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+      background: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #4CAF50;
+      padding: 15px 20px;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #45a049;
+    }
+
+    /* Sections */
+    section {
+      padding: 20px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #000000;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      color: #4b5563;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Section des fonctionnalités */
+    .features {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .feature {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      flex: 1 1 250px;
+      transition: transform 0.3s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-10px);
+    }
+
+    .feature img {
+      width: 300px;
+      height: 200px;
+      margin-bottom: 20px;
+    }
+
+    .feature h3 {
+      font-size: 1.5rem;
+      margin: 10px 0;
+      color: #000000;
+    }
+
+    .feature p {
+      font-size: 1rem;
+      color: bl;
+    }
+
+    /* Section des tarifs */
+    .pricing {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .price-tier {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      flex: 1 1 300px;
+      transition: transform 0.3s ease;
+    }
+
+    .price-tier:hover {
+      transform: translateY(-10px);
+    }
+
+    .price-tier h3 {
+      font-size: 1.8rem;
+      color: #000000;
+    }
+
+    .price-tier .price {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #4CAF50;
+      margin: 20px 0;
+    }
+
+    .price-tier ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .price-tier ul li {
+      margin: 10px 0;
+      color: bl;
+    }
+
+    .price-tier .cta-button {
+      display: inline-block;
+      background: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .price-tier .cta-button:hover {
+      background: #45a049;
+    }
+
+    /* Section de contact */
+    #contact {
+      background: white;
+      padding: 60px 20px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    form input, form textarea {
+      padding: 10px;
+      border: 1px solid #e5e7eb;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    form button {
+      background: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    form button:hover {
+      background: #45a049;
+    }
+
+    /* Pied de page */
+    footer {
+      background: #000000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav a {
+        padding: 10px;
+      }
+
+      section h2 {
+        font-size: 2rem;
+      }
+
+      .features, .pricing {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .feature, .price-tier {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- <h1>MindfulTech Pro</h1> -->
+     <div style="width: 100%; background: green;padding: 12px 0;">
+        <img class="logo" src="logo.png" alt="Suggestions personnalisées">
+        <p style="background:green; position: relative; margin-top: -80px; font-size: 10px;">Le bien-être et la productivité ne font qu'un</p>
+        <!-- <p style="background:green; position: relative; margin-top: -60px">Améliorez votre bien-être mental tout en restant productif</p> -->
+      </div>
+    <!-- <p>Améliorez votre bien-être mental tout en restant productif</p> -->
+  </header>
+  <nav>
+    <a href="#about">À propos</a>
+    <a href="#features">Fonctionnalités</a>
+    <a href="#pricing">Tarifs</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <section id="about">
+    <h2>À propos de MindfulTech Pro</h2>
+    <p>MindfulTech Pro est une plateforme SaaS conçue pour aider les professionnels à maintenir leur bien-être mental tout en restant productifs. En combinant l'IA et des techniques de pleine conscience, nous créons un environnement de travail plus sain et plus efficace.</p>
+    <div style="justify-content: center; align-items: center; display: flex;">
+      <img style="width: 70%; height: 500px;" src="img_a_propos2.png" alt="Analyse en temps réel">
+    </div>
+  </section>
+  <section id="features">
+    <h2>Fonctionnalités clés</h2>
+    <div class="features">
+      <div class="feature">
+        <img src="https://via.placeholder.com/80" alt="Analyse en temps réel">
+        <h3>Analyse en temps réel</h3>
+        <p>Surveillez les habitudes de travail pour optimiser la productivité.</p>
+      </div>
+      <div class="feature">
+        <img src="suggestion_personnalisées.jpeg" alt="Suggestions personnalisées">
+        <h3>Suggestions personnalisées</h3>
+        <p>Recommandations de pauses et d'exercices adaptées à vos besoins.</p>
+      </div>
+      <div class="feature">
+        <img src="Integration_outils.jpeg" alt="Intégration d'outils">
+        <h3>Intégration d'outils</h3>
+        <p>Intégration avec Slack, MS Teams et Google Workspace.</p>
+      </div>
+      <div class="feature">
+        <img src="tb_bien_etre.jpeg" alt="Tableau de bord">
+        <h3>Tableau de bord</h3>
+        <p>Suivez votre bien-être mental et vos performances.</p>
+      </div>
+    </div>
+  </section>
+  <section id="pricing">
+    <h2>Nos tarifs</h2>
+    <div class="pricing">
+      <div class="price-tier">
+        <h3>Basique</h3>
+        <p class="price">15000 Fcfa <br> Utilisateur/mois</p>
+        <ul>
+          <li>Analyse en temps réel</li>
+          <li>Intégrations de base</li>
+          <li>Support par email</li>
+        </ul>
+        <a href="#contact" class="cta-button">Commencer</a>
+      </div>
+      <div class="price-tier">
+        <h3>Pro</h3>
+        <p class="price">25000 Fcfa <br> Utilisateur/mois</p>
+        <ul>
+          <li>Analyses avancées</li>
+          <li>Intégrations complètes</li>
+          <li>Support prioritaire</li>
+        </ul>
+        <a href="#contact" class="cta-button">Commencer</a>
+      </div>
+      <div class="price-tier">
+        <h3>Entreprise</h3>
+        <p class="price">Devis <br> personnalisé</p>
+        <ul>
+          <li>Solutions sur mesure</li>
+          <li>Support dédié</li>
+          <li>Assistance à l'intégration</li>
+        </ul>
+        <a href="#contact" class="cta-button">Nous contacter</a>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <h2>Contactez-nous</h2>
+    <form>
+      <input type="text" placeholder="Votre nom" required>
+      <input type="email" placeholder="Votre email" required>
+      <textarea placeholder="Votre message" rows="5" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+  <footer>
+    <p>&copy; 2025 MindfulTech Pro. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>
